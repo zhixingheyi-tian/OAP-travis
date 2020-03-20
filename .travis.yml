@@ -2,11 +2,11 @@ sudo: required
 dist: trusty
 language: java
 before_install:
-- sh OAP-travis-bootstrap.sh before_install
+- bash OAP-travis-bootstrap.sh before_install
 install:
-- sh OAP-travis-bootstrap.sh install
+- bash OAP-travis-bootstrap.sh install
 before_script:
-- sh OAP-travis-bootstrap.sh before_script
+- bash OAP-travis-bootstrap.sh before_script
 script:
-- sh OAP-travis-bootstrap.sh script
+- bash OAP-travis-bootstrap.sh script
 
