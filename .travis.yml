@@ -2,10 +2,11 @@ sudo: required
 dist: trusty
 language: java
 before_install:
-- sudo apt-get install cmake
-- sudo apt-get install libpthread-stubs0-dev
-- sudo apt-get install libnuma-dev
+- sh OAP-travis-bootstrap.sh before_install
+install:
+- sh OAP-travis-bootstrap.sh install
+before_script:
+- sh OAP-travis-bootstrap.sh before_script
 script:
-- cd oap-cache/oap/
-- sh travis-check.sh
-- cd -
+- sh OAP-travis-bootstrap.sh script
+
