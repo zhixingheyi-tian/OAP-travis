@@ -28,7 +28,7 @@ do
 	if [ -f $module/travis-verify.sh ]
 	then
 		echo "exist!"
-		sh $module/travis-verify.sh $1
+		bash $module/travis-verify.sh $1
 	fi
 done
 
