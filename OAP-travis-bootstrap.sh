@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo dpkg-reconfigure dash
+
 modules=(
 	oap-cache/oap/
 	oap-cache/pegasus/
