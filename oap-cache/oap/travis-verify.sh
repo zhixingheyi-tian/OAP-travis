@@ -8,9 +8,7 @@ function before_install {
 }
 
 function install {
-	[ -f spark ] || mkdir spark && cd spark && wget http://archive.apache.org/dist/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz && cd ..
-	tar -xf ./spark/spark-2.4.4-bin-hadoop2.7.tgz
-	export SPARK_HOME=`pwd`/spark-2.4.4-bin-hadoop2.7
+	
 }
 
 function before_script {
@@ -23,6 +21,10 @@ function before_script {
 }
 
 function script {
+	[ -f spark ] || mkdir spark && cd spark && wget http://archive.apache.org/dist/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz && cd ..
+	tar -xf ./spark/spark-2.4.4-bin-hadoop2.7.tgz
+	export SPARK_HOME=`pwd`/spark-2.4.4-bin-hadoop2.7
+	
 	cd oap-cache/oap/
 	mvn clean -q -Ppersistent-memory test
 }
