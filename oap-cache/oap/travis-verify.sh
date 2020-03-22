@@ -8,7 +8,7 @@ function before_install {
 }
 
 function install {
-	
+	exit 0
 }
 
 function before_script {
