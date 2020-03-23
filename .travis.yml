@@ -5,11 +5,6 @@ before_install:
 - sudo apt-get install cmake
 - sudo apt-get install libpthread-stubs0-dev
 - sudo apt-get install libnuma-dev
-install:
-- 
-before_script:
-- bash OAP-travis-bootstrap.sh before_script
 script:
-- bash OAP-travis-bootstrap.sh install
 - bash OAP-travis-bootstrap.sh script
 

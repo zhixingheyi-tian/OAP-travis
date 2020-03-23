@@ -16,7 +16,8 @@ modules=(
 
 
 
-if [ "$1" != "before_install" ] && [ "$1" != "install" ] && [ "$1" != "before_script" ] && [ "$1" != "script" ]
+#if [ "$1" != "before_install" ] && [ "$1" != "install" ] && [ "$1" != "before_script" ] && [ "$1" != "script" ]
+if [ "$1" != "script" ]
 then
 	echo "Don't support this arg: $1"
 	exit 1
